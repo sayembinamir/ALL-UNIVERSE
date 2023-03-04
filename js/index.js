@@ -44,7 +44,7 @@ displayHub = (hubData, dataLimit) =>{
        `;
        hubSection.appendChild(hubDiv);
     });
-    // toggleSpinner(false);
+    toggleSpinner(false);
 }
 
 const process =(dataLimit) => {
