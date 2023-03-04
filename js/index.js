@@ -134,6 +134,20 @@ const displaySingleDataDetails =info =>{
  
  
  }
+ const sortByDate = () => {
+    document.getElementById('load').classList.remove('d-none');
+    const url = 'https://openapi.programming-hero.com/api/ai/tools'
+    fetch(url)
+    .then( res => res.json())
+    .then(data => {
+        
+        document.getElementById('load').classList.add('d-none');
+        const hubData = data.data.tools;
+        hubData.sort((a,b) => new Date(b.published_in) - new Date(a.published_in));
+        displayHub(hubData);
+        
+    })
+}
 
 
 loadHub(6);
