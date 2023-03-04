@@ -1,5 +1,5 @@
 
-const loadHub = async(dataLimit) =>{
+// const loadHub = async(dataLimit) =>{
     const url =`https://openapi.programming-hero.com/api/ai/tools`
     const res = await fetch(url);
     const data = await res.json();
